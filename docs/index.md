@@ -6,8 +6,8 @@ hero:
   text: "DevOps and Homelab Engineering"
   tagline: "High-performance GitOps, bare-metal local AI, automated CI/CD pipelines, and robust Linux infrastructure engineered by Yasir (@aayasir2177)."
   image:
-    src: /images/hero_diagram.png
-    alt: HomeNode Architecture Diagram
+    src: /images/hero_diagram.gif
+    alt: HomeNode Architecture Animated Flow Diagram
   actions:
     - theme: brand
       text: Explore Documentation

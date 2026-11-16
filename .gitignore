@@ -4,3 +4,5 @@ docs/.vitepress/cache
 .DS_Store
 *.log
 .env
+__pycache__/
+*.pyc
