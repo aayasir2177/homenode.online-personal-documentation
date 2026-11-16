@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  homenode-docs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: homenode-docs
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost/"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+    networks:
+      - web
+
+networks:
+  web:
+    name: web
