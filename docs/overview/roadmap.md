@@ -84,13 +84,3 @@ Below is the verified index of DevOps repositories maintained by [Yasir (@aayasi
 | **Audiobookshelf Docker** | Self-Hosting | Docker Compose, Volume Mapping, Metadata Scraping | [Read Guide](/linux/docker-lamp-audiobookshelf) |
 | **Ansible Practice** | Configuration Mgmt | Playbooks, Roles, Inventory, Ad-Hoc Commands, KVM | [Read Guide](/automation/ansible-automation) |
 | **Bash Practice** | Automation | Loops, Conditionals, Data Streams, Redirection, Tests | [Read Guide](/automation/bash-scripting) |
-
----
-
-## Summary of Infrastructure Specifications
-
-- **Hypervisors / Hosts**: Fedora Server 43 & 45 running on bare-metal hardware.
-- **Virtualization**: KVM / QEMU managed via `virsh` and Ansible automation.
-- **Orchestration**: Lightweight production-grade Kubernetes cluster + Docker Compose via Portainer CE.
-- **Edge Routing**: Cloudflare Edge + QUIC Tunnels (`cloudflared`).
-- **Storage Subsystems**: Network File System (NFS), local NVMe SSDs for KV-cache acceleration, and ZFS/ext4 arrays.

@@ -91,17 +91,3 @@ flowchart TD
     Monitoring -. "Node Exporter" .-> LocalHost
     LinuxBackup -. "rsync over NFS" .-> NFS
 ```
-
----
-
-## Hardware Node Specifications
-
-| Component | Specification | Operational Role |
-| :--- | :--- | :--- |
-| **Host Operating System** | Fedora Server 43 / 45 Linux (Kernel 6.11+) | Base bare-metal virtualization & container host |
-| **Processor (CPU)** | Intel Core Multi-Core with AVX2 instruction sets | Bare-metal RAMen AI inference & Kubernetes workloads |
-| **GPU / Transcoder** | Integrated Intel QuickSync Video (iGPU) | Hardware-accelerated Jellyfin 4K H.264/HEVC transcoding |
-| **System Memory (RAM)** | 32GB - 64GB DDR4/DDR5 | Shared across Kubernetes node, Ollama, and host cache |
-| **Storage Primary** | NVMe PCIe 4.0 SSD | Host OS, Kubernetes PVs, and RAMen KV-cache sessions |
-| **Storage Secondary** | Multi-Terabyte HDD Storage + Remote NFS | Long-term media libraries, cold logs, and daily backups |
-| **Local Gateway / DNS** | Pi-hole (`192.168.122.84:53`) | Local split-horizon DNS routing (`*.homelab.lan`) |
