@@ -4,7 +4,7 @@ Deployment recipes and container specifications for self-hosting media and web a
 
 ---
 
-## 🎧 1. Audiobookshelf Streaming Server
+## 1. Audiobookshelf Streaming Server
 
 **Audiobookshelf** is an open-source, self-hosted media server specifically engineered for audiobooks and podcasts, featuring progressive web streaming, multiple user accounts, chapter navigation, and automatic OpenLibrary / Audible metadata scraping.
 
@@ -20,7 +20,7 @@ flowchart TD
         Podcasts["/srv/audiobookshelf/podcasts"]
     end
 
-    Client -- "Port 13378 (or Reverse Proxy)" --> ABS
+    Client - "Port 13378 (or Reverse Proxy)" --> ABS
     ABS <--> Config
     ABS <--> Metadata
     ABS <--> Audiobooks
@@ -61,7 +61,7 @@ Access the server at `http://<SERVER_IP>:13378`.
 
 ---
 
-## 🗄️ 2. Dockerized WordPress LAMP Stack
+## 2. Dockerized WordPress LAMP Stack
 
 A complete local development and staging environment running WordPress, MariaDB database, and phpMyAdmin over an isolated bridge network.
 

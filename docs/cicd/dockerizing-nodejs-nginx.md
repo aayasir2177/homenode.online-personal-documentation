@@ -4,7 +4,7 @@ A step-by-step hands-on guide documenting the containerization of an Express/Nod
 
 ---
 
-## 🏗️ Architecture & Network Flow
+## Architecture & Network Flow
 
 ```mermaid
 flowchart LR
@@ -13,8 +13,8 @@ flowchart LR
     NodeApp["Node.js Container (:8080)"]
     Bridge["Docker Bridge Network ('web')"]
 
-    Client -- "http://nodejs-webapp.local" --> NPM
-    NPM -- "Upstream: nodejs-webapp:8080" --> Bridge
+    Client - "http://nodejs-webapp.local" --> NPM
+    NPM - "Upstream: nodejs-webapp:8080" --> Bridge
     Bridge --> NodeApp
 ```
 
@@ -23,7 +23,7 @@ flowchart LR
 
 ---
 
-## 📄 Application & Dockerfile Implementation
+## Application & Dockerfile Implementation
 
 ### 1. Minimal Express Application (`server.js`)
 ```javascript
@@ -75,7 +75,7 @@ letsencrypt
 
 ---
 
-## 🐳 Docker Compose Stack (`compose.yaml`)
+## Docker Compose Stack (`compose.yaml`)
 
 ```yaml
 services:
@@ -111,7 +111,7 @@ networks:
 
 ---
 
-## 🌐 Local DNS / Hosts Routing
+## Local DNS / Hosts Routing
 
 Map the custom domain locally in `/etc/hosts`:
 

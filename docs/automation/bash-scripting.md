@@ -4,7 +4,7 @@ Foundational and advanced Linux shell scripting practices focusing on robust par
 
 ---
 
-## 🛠️ Core Shell Scripting Principles
+## Core Shell Scripting Principles
 
 Production DevOps scripts differ from casual CLI commands. They must handle unexpected arguments, exit gracefully upon failure, record meaningful log streams, and validate file preconditions.
 
@@ -21,7 +21,7 @@ IFS=$'\n\t'
 
 ---
 
-## 🌊 Stream Redirection & File Descriptors
+## Stream Redirection & File Descriptors
 
 Linux provides three standard data streams for every running process:
 
@@ -43,7 +43,7 @@ find / -name "*.conf" 2>/dev/null > found_configs.txt
 
 ---
 
-## 📁 File & Directory Test Operators
+## File & Directory Test Operators
 
 ```bash
 # Verify file exists and is a regular file
@@ -65,7 +65,7 @@ fi
 
 ---
 
-## 🔄 Robust Differential Backup Script
+## Robust Differential Backup Script
 
 An argument-validated differential backup script using `rsync` with hardlinks and timestamped logging:
 
@@ -122,7 +122,7 @@ fi
 
 ---
 
-## 🔁 Control Flow: Loops & Functions
+## Control Flow: Loops & Functions
 
 ### Parsing Files & Processing Line-by-Line:
 ```bash

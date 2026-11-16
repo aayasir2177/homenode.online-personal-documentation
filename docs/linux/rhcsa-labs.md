@@ -4,7 +4,7 @@ Practical laboratory notes, essential commands, and enterprise procedures aligne
 
 ---
 
-## 💾 1. Logical Volume Management (LVM) & Storage
+## 1. Logical Volume Management (LVM) & Storage
 
 ```mermaid
 flowchart TD
@@ -41,7 +41,7 @@ sudo xfs_growfs /var/app_data
 
 ---
 
-## 🛡️ 2. SELinux Security Management
+## 2. SELinux Security Management
 
 SELinux enforces Mandatory Access Control (MAC) based on security contexts (`user:role:type:level`).
 
@@ -73,7 +73,7 @@ sudo semanage port -a -t http_port_t -p tcp 8088
 
 ---
 
-## 🔥 3. Firewalld Zones & Network Rules
+## 3. Firewalld Zones & Network Rules
 
 ```bash
 # View active zone and assigned interfaces
@@ -94,7 +94,7 @@ sudo firewall-cmd --reload
 
 ---
 
-## 👥 4. POSIX Access Control Lists (ACLs) & Collaboration
+## 4. POSIX Access Control Lists (ACLs) & Collaboration
 
 ```bash
 # Set default group permissions on project folder

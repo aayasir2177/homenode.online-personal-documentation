@@ -4,7 +4,7 @@ A modern, production-pattern microservices application designed for practicing *
 
 ---
 
-## 🏗️ Architecture & Component Topology
+## Architecture & Component Topology
 
 ```mermaid
 flowchart TD
@@ -22,10 +22,10 @@ flowchart TD
         T2["Target Website B (Latency & Health)"]
     end
 
-    UI -- "REST API / Status Fetch" --> API
+    UI - "REST API / Status Fetch" --> API
     API --> Engine
-    Engine -- "HTTP Probes" --> T1
-    Engine -- "HTTP Probes" --> T2
+    Engine - "HTTP Probes" --> T1
+    Engine - "HTTP Probes" --> T2
 ```
 
 * **Frontend (Next.js 15)**: Modern status dashboard displaying real-time target status (`UP` / `DOWN`), latency in milliseconds, HTTP response codes, and manual probe trigger buttons.
@@ -35,7 +35,7 @@ flowchart TD
 
 ---
 
-## ⚡ GitHub Actions CI/CD Pipeline
+## GitHub Actions CI/CD Pipeline
 
 The pipeline is defined in `.github/workflows/ci.yml` and is triggered on every `push` and `pull_request` against `main`.
 
@@ -45,8 +45,8 @@ flowchart LR
     Push --> J2["frontend-ci<br/>Node 22, npm ci, next build"]
     J1 --> J3{"Both Passed?"}
     J2 --> J3
-    J3 -- Yes --> J4["docker-build (Docker Buildx)<br/>Build multi-stage containers & push to ghcr.io"]
-    J3 -- No --> Fail["Pipeline Fails & Blocks Merge"]
+    J3 - Yes --> J4["docker-build (Docker Buildx)<br/>Build multi-stage containers & push to ghcr.io"]
+    J3 - No --> Fail["Pipeline Fails & Blocks Merge"]
 ```
 
 ### Complete Workflow Definition:
@@ -153,7 +153,7 @@ jobs:
 
 ---
 
-## 🐳 Docker Compose Multi-Container Orchestration
+## Docker Compose Multi-Container Orchestration
 
 ```yaml
 version: "3.8"
@@ -190,7 +190,7 @@ services:
 
 ---
 
-## 🚀 Running Locally
+## Running Locally
 
 ```bash
 # Clone the repository

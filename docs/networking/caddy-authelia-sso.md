@@ -4,7 +4,7 @@ Centralized Single Sign-On (SSO) forward-authentication architecture securing lo
 
 ---
 
-## 🏛️ Architecture & Authentication Flow
+## Architecture & Authentication Flow
 
 When a client requests access to a protected internal service (such as `dockhand.home.server` or `qbt.home.server`):
 
@@ -38,7 +38,7 @@ sequenceDiagram
 
 ---
 
-## ⚙️ Configuration Files
+## Configuration Files
 
 ### 1. Production Caddyfile (`Caddyfile`)
 
@@ -128,8 +128,8 @@ users:
 
 ---
 
-## 🛡️ Security Benefits
+## Security Benefits
 
-* **Unified Access Control**: Any service—even one lacking built-in login mechanisms—is instantly secured with enterprise-grade authentication.
+* **Unified Access Control**: Any service - even one lacking built-in login mechanisms - is instantly secured with enterprise-grade authentication.
 * **Header Injection**: Caddy passes `Remote-User` and `Remote-Email` to upstreams, enabling automatic profile recognition without secondary logins.
 * **Internal TLS**: Caddy's built-in step-ca (`tls internal`) issues locally trusted certificates, preventing unencrypted plaintext internal communications.

@@ -1,10 +1,10 @@
-# ⚡ HomeNode Docs (`homenode.online`)
+# HomeNode Docs (`homenode.online`)
 
 Personal documentation hub for production-grade **DevOps Engineering, Kubernetes GitOps, Infrastructure as Code, Linux Systems Administration, and Observability**, engineered and maintained by [Yasir (@aayasir2177)](https://github.com/aayasir2177).
 
 ---
 
-## 🚀 Features
+## Features
 
 * **Built with VitePress 1.6+**: Blazingly fast static HTML generation, responsive mobile-ready layout, and instant client-side full-text search.
 * **Deep Architectural Documentation**: Covers real homelab topologies, zero-delay ArgoCD GitOps pipelines, Cloudflare QUIC tunnels, and hybrid bare-metal local AI inference.
@@ -13,7 +13,7 @@ Personal documentation hub for production-grade **DevOps Engineering, Kubernetes
 
 ---
 
-## 📁 Documentation Structure
+## Documentation Structure
 
 ```text
 docs/
@@ -48,7 +48,7 @@ docs/
 
 ---
 
-## 🛠️ Local Development
+## Local Development
 
 ### 1. Install Dependencies
 ```bash
@@ -74,7 +74,7 @@ npm run preview
 
 ---
 
-## 🐳 Docker Deployment
+## Docker Deployment
 
 ### Run with Docker Compose
 ```bash

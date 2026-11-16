@@ -4,20 +4,20 @@ A Linux storage laboratory detailing the installation, export configuration, fir
 
 ---
 
-## 🏗️ Lab Architecture
+## Lab Architecture
 
 ```mermaid
 flowchart LR
     Server["NFS Server (Fedora)<br/>IP: 192.168.122.68<br/>Export: /nfs/share"]
     Client["NFS Client (Ubuntu)<br/>IP: 192.168.122.70<br/>Mount: /nfs/mnt"]
 
-    Client -- "NFSv4 RPC / TCP Port 2049" --> Server
+    Client - "NFSv4 RPC / TCP Port 2049" --> Server
     Server <--> Disk["Physical Storage (/nfs/share)"]
 ```
 
 ---
 
-## 🖥️ Server Configuration (Fedora)
+## Server Configuration (Fedora)
 
 ### 1. Install Utilities & Enable Service
 ```bash
@@ -61,7 +61,7 @@ sudo exportfs -v
 
 ---
 
-## 💻 Client Configuration (Ubuntu)
+## Client Configuration (Ubuntu)
 
 ### 1. Install NFS Client Libraries
 ```bash

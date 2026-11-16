@@ -4,7 +4,7 @@ Deploy a self-hosted, private AI infrastructure on Kubernetes using **Ollama** (
 
 ---
 
-## 🏗️ Architecture Overview
+## Architecture Overview
 
 ```text
 [ Browser / User ]
@@ -34,7 +34,7 @@ Deploy a self-hosted, private AI infrastructure on Kubernetes using **Ollama** (
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```text
 k8s-ollama-openwebui/
@@ -50,7 +50,7 @@ k8s-ollama-openwebui/
 
 ---
 
-## 📄 Key Manifests
+## Key Manifests
 
 ### 1. Ollama Deployment (`01-dep-ollama.yaml`)
 
@@ -152,7 +152,7 @@ resources:
 
 ---
 
-## 🚀 Deployment & Operation
+## Deployment & Operation
 
 ### 1. Deploy Stack
 ```bash
@@ -173,11 +173,11 @@ Exec into the Ollama container to pull quantized models directly into the 10Gi p
 
 ```bash
 # Pull lightweight performant models
-kubectl exec -it -n local-ai deployment/ollama -- ollama pull qwen2.5:3b
-kubectl exec -it -n local-ai deployment/ollama -- ollama pull llama3.2:3b
+kubectl exec -it -n local-ai deployment/ollama - ollama pull qwen2.5:3b
+kubectl exec -it -n local-ai deployment/ollama - ollama pull llama3.2:3b
 
 # Verify downloaded models
-kubectl exec -it -n local-ai deployment/ollama -- ollama list
+kubectl exec -it -n local-ai deployment/ollama - ollama list
 ```
 
 ### 4. Accessing the Web UI

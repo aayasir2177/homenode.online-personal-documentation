@@ -4,7 +4,7 @@ Architecture guide for building an internal name-based resolution system using *
 
 ---
 
-## 🎯 The Core Problem & Solution
+## The Core Problem & Solution
 
 ### Without Local DNS + Reverse Proxy:
 * Accessing services requires remembering arbitrary IP addresses and port numbers:
@@ -34,15 +34,15 @@ flowchart TD
         PiAdmin["Pi-hole Web UI (:8080/admin)"]
     end
 
-    Client -- "1. DNS Query: grafana.homelab.lan" --> Pihole
-    Pihole -- "2. Returns: 192.168.122.84" --> Client
-    Client -- "3. HTTP GET (Host: grafana.homelab.lan)" --> NPM
-    NPM -- "4. Reverse Proxy Stream" --> Grafana
+    Client - "1. DNS Query: grafana.homelab.lan" --> Pihole
+    Pihole - "2. Returns: 192.168.122.84" --> Client
+    Client - "3. HTTP GET (Host: grafana.homelab.lan)" --> NPM
+    NPM - "4. Reverse Proxy Stream" --> Grafana
 ```
 
 ---
 
-## 🐳 Docker Compose Stack
+## Docker Compose Stack
 
 ```yaml
 services:
@@ -88,7 +88,7 @@ networks:
 
 ---
 
-## 🛠️ Critical Engineering Lessons & Fixes
+## Critical Engineering Lessons & Fixes
 
 ### 1. Port 53 Host Collision with Libvirt `dnsmasq`
 * **Symptom**: `docker compose up` failed with `Bind for 0.0.0.0:53 failed: port is already allocated`.

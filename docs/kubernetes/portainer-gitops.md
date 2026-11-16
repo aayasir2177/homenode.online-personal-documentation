@@ -4,7 +4,7 @@ A declarative, version-controlled Docker Compose infrastructure managed via **Po
 
 ---
 
-## 🏗️ Architecture Workflow
+## Architecture Workflow
 
 ```mermaid
 flowchart TD
@@ -13,14 +13,14 @@ flowchart TD
     HostFS["Host Storage (/srv/service_name/)"]
     Containers["Docker Engine & Container Stacks"]
 
-    GitRepo -- "Automated Polling / Webhook" --> Portainer
-    Portainer -- "Inject Runtime Environment Secrets" --> Containers
+    GitRepo - "Automated Polling / Webhook" --> Portainer
+    Portainer - "Inject Runtime Environment Secrets" --> Containers
     Containers <== "Host-Bound Volumes" ==> HostFS
 ```
 
 ---
 
-## 🔑 Key Engineering Principles
+## Key Engineering Principles
 
 ### 1. Host-Bound Data Persistence (`/srv/`)
 To eliminate container-internal anonymous volume drift and prevent database corruption during container redeployments:
@@ -41,7 +41,7 @@ To eliminate container-internal anonymous volume drift and prevent database corr
 
 ---
 
-## 📄 Stack Directory Conventions
+## Stack Directory Conventions
 
 ```text
 homelab-gitops/
@@ -86,7 +86,7 @@ networks:
 
 ---
 
-## ⚡ Deployment & Rollout via Portainer
+## Deployment & Rollout via Portainer
 
 1. Inside Portainer CE, select **Stacks** > **Add stack with repository**.
 2. Point the stack source to `https://github.com/aayasir2177/homelab-gitops.git`.

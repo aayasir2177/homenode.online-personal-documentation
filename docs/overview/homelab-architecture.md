@@ -4,7 +4,7 @@ An enterprise-grade homelab designed for high reliability, minimal maintenance o
 
 ---
 
-## 🏛️ Comprehensive Architecture Diagram
+## Comprehensive Architecture Diagram
 
 The entire cluster runs on dedicated bare-metal hardware with isolated network planes, edge tunnel routing, and automated Kubernetes synchronization.
 
@@ -12,7 +12,7 @@ The entire cluster runs on dedicated bare-metal hardware with isolated network p
 
 ---
 
-## 🔒 Foundational Design Principles
+## Foundational Design Principles
 
 ### 1. Zero Inbound Ports (Cloudflare QUIC Tunnels)
 Traditional homelab setups require opening port 80/443 on consumer router firmware and configuring Dynamic DNS (DDNS). This exposes the household WAN IP to port scans, brute-force bots, and DDoS threats.
@@ -39,7 +39,7 @@ Default GitOps tooling relies on a polling loop (frequently set to 3 minutes in 
 
 ---
 
-## 🌐 Network Topology & Segment Routing
+## Network Topology & Segment Routing
 
 ```mermaid
 flowchart TD
@@ -94,7 +94,7 @@ flowchart TD
 
 ---
 
-## 💻 Hardware Node Specifications
+## Hardware Node Specifications
 
 | Component | Specification | Operational Role |
 | :--- | :--- | :--- |

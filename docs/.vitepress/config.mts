@@ -2,81 +2,78 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   title: 'HomeNode Docs',
-  description: 'Production-Grade DevOps, Kubernetes & Homelab Engineering Documentation by Yasir',
+  description: 'DevOps, Kubernetes and Homelab Engineering Documentation by Yasir',
   cleanUrls: true,
   lastUpdated: true,
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
-    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+    ['meta', { name: 'theme-color', content: '#10b981' }],
     ['meta', { name: 'author', content: 'Yasir' }]
   ],
   themeConfig: {
-    siteTitle: '⚡ HomeNode Docs',
+    siteTitle: 'HomeNode Docs',
     logo: '/logo.svg',
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Roadmap & Architecture', link: '/overview/roadmap' },
-      { text: 'Kubernetes & GitOps', link: '/kubernetes/argocd-gitops' },
-      { text: 'CI/CD & Microservices', link: '/cicd/mini-uptime-monitor' },
-      { text: 'Observability & Net', link: '/networking/prometheus-grafana' },
-      { text: 'Linux & Storage', link: '/linux/linux-backup-automation' },
-      { text: 'Automation', link: '/automation/ansible-automation' }
+      { text: 'Documentation', link: '/overview/roadmap' },
+      { text: 'Architecture', link: '/overview/homelab-architecture' },
+      { text: 'GitHub', link: 'https://github.com/aayasir2177' }
     ],
     sidebar: [
       {
-        text: 'Overview & Architecture',
+        text: 'Overview and Architecture',
         collapsed: false,
         items: [
-          { text: 'DevOps Roadmap & Journey', link: '/overview/roadmap' },
+          { text: 'DevOps Roadmap and Journey', link: '/overview/roadmap' },
           { text: 'Homelab Infrastructure Map', link: '/overview/homelab-architecture' }
         ]
       },
       {
-        text: 'Kubernetes & GitOps',
+        text: 'Kubernetes and GitOps',
         collapsed: false,
         items: [
           { text: 'Zero-Delay ArgoCD GitOps', link: '/kubernetes/argocd-gitops' },
-          { text: 'OpenWebUI + Bare-Metal RAMen AI', link: '/kubernetes/local-ai-ramen-openwebui' },
+          { text: 'OpenWebUI and Bare-Metal RAMen AI', link: '/kubernetes/local-ai-ramen-openwebui' },
           { text: 'Local AI on K8s (Ollama Stack)', link: '/kubernetes/local-ai-ollama-k8s' },
-          { text: 'Jellyfin Media Cluster + GPU Pass', link: '/kubernetes/jellyfin-k8s' },
+          { text: 'Jellyfin Media Cluster and GPU Pass', link: '/kubernetes/jellyfin-k8s' },
           { text: 'Declarative Compose GitOps (Portainer)', link: '/kubernetes/portainer-gitops' }
         ]
       },
       {
-        text: 'CI/CD & Microservices',
+        text: 'CI/CD and Microservices',
         collapsed: false,
         items: [
           { text: 'Mini Uptime Monitor CI/CD', link: '/cicd/mini-uptime-monitor' },
-          { text: 'Dockerizing Node.js + Nginx Proxy', link: '/cicd/dockerizing-nodejs-nginx' }
+          { text: 'Dockerizing Node.js and Nginx Proxy', link: '/cicd/dockerizing-nodejs-nginx' }
         ]
       },
       {
-        text: 'Observability & Networking',
+        text: 'Observability and Networking',
         collapsed: false,
         items: [
-          { text: 'Prometheus & Grafana Monitoring', link: '/networking/prometheus-grafana' },
-          { text: 'Pi-hole Local DNS & NPM Proxy', link: '/networking/pihole-npm' },
-          { text: 'Caddy + Authelia SSO Architecture', link: '/networking/caddy-authelia-sso' }
+          { text: 'Prometheus and Grafana Monitoring', link: '/networking/prometheus-grafana' },
+          { text: 'Pi-hole Local DNS and NPM Proxy', link: '/networking/pihole-npm' },
+          { text: 'Caddy and Authelia SSO Architecture', link: '/networking/caddy-authelia-sso' }
         ]
       },
       {
-        text: 'Linux Systems & Storage',
+        text: 'Linux Systems and Storage',
         collapsed: false,
         items: [
-          { text: 'Automated Linux Backups (rsync + systemd)', link: '/linux/linux-backup-automation' },
-          { text: 'Enterprise NFS Server & Client Setup', link: '/linux/nfs-setup' },
-          { text: 'SSH Hardening & Client Config', link: '/linux/ssh-hardening' },
+          { text: 'Automated Linux Backups (rsync and systemd)', link: '/linux/linux-backup-automation' },
+          { text: 'Enterprise NFS Server and Client Setup', link: '/linux/nfs-setup' },
+          { text: 'SSH Hardening and Client Config', link: '/linux/ssh-hardening' },
           { text: 'RHCSA 9 Exam Preparation Labs', link: '/linux/rhcsa-labs' },
           { text: 'LEMP Stack WordPress Deployment', link: '/linux/wordpress-lemp-stack' },
-          { text: 'Self-Hosted Docker Services (Audiobookshelf & LAMP)', link: '/linux/docker-lamp-audiobookshelf' }
+          { text: 'Self-Hosted Docker Services (Audiobookshelf and LAMP)', link: '/linux/docker-lamp-audiobookshelf' }
         ]
       },
       {
-        text: 'Automation & Scripting',
+        text: 'Automation and Scripting',
         collapsed: false,
         items: [
-          { text: 'Ansible Playbooks & KVM Automation', link: '/automation/ansible-automation' },
-          { text: 'Production Bash Scripting & Streams', link: '/automation/bash-scripting' }
+          { text: 'Ansible Playbooks and KVM Automation', link: '/automation/ansible-automation' },
+          { text: 'Production Bash Scripting and Streams', link: '/automation/bash-scripting' }
         ]
       }
     ],
@@ -88,8 +85,8 @@ export default defineConfig({
       { icon: 'linkedin', link: 'https://linkedin.com/in/aayasir217' }
     ],
     footer: {
-      message: 'Self-hosted and documented with VitePress • homenode.online',
-      copyright: 'Copyright © 2026 Yasir (@aayasir2177)'
+      message: 'Self-hosted and documented with VitePress on homenode.online',
+      copyright: 'Copyright (c) 2026 Yasir (@aayasir2177)'
     },
     docFooter: {
       prev: 'Previous Page',

@@ -4,19 +4,19 @@ Welcome to the central documentation of my DevOps engineering journey. This road
 
 ---
 
-## 🎯 Engineering Philosophy
+## Engineering Philosophy
 
 > **"If it's not version-controlled, declarative, and automated, it doesn't exist."**
 
 1. **Zero Open Inbound Ports**: Never expose home routers or public IP addresses directly to the internet; utilize cryptographic outbound tunnels (Cloudflare QUIC tunnels) with edge-authenticated access.
-2. **Git as Single Source of Truth**: All configurations—from Kubernetes manifests and Docker Compose stacks to systemd units—are versioned in Git repositories.
+2. **Git as Single Source of Truth**: All configurations - from Kubernetes manifests and Docker Compose stacks to systemd units - are versioned in Git repositories.
 3. **Automated Drift Correction**: Systems must continuously reconcile their live operational state against declared Git state without human intervention.
 4. **Least Privilege & Secret Isolation**: Secrets never touch public or private Git repositories unencrypted; credentials belong in native Kubernetes Secrets or environment runtime injections.
 5. **Observability by Design**: Metrics, logs, and health status are collected at the host and container levels to eliminate operational blindspots.
 
 ---
 
-## 🗺️ Progressive Roadmap & Competencies
+## Progressive Roadmap & Competencies
 
 ```mermaid
 flowchart TD
@@ -60,7 +60,7 @@ flowchart TD
 
 ---
 
-## 📂 Active DevOps Projects Index
+## Active DevOps Projects Index
 
 Below is the verified index of DevOps repositories maintained by [Yasir (@aayasir2177)](https://github.com/aayasir2177):
 
@@ -87,7 +87,7 @@ Below is the verified index of DevOps repositories maintained by [Yasir (@aayasi
 
 ---
 
-## 📊 Summary of Infrastructure Specifications
+## Summary of Infrastructure Specifications
 
 - **Hypervisors / Hosts**: Fedora Server 43 & 45 running on bare-metal hardware.
 - **Virtualization**: KVM / QEMU managed via `virsh` and Ansible automation.

@@ -25,3 +25,43 @@
   background-color: var(--vp-c-bg-soft);
   margin: 1rem 0;
 }
+
+/* Hero Section: Left diagram, right text */
+@media (min-width: 960px) {
+  .VPHero.has-image .container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+  }
+
+  .VPHero.has-image .main {
+    flex: 1 1 50%;
+    max-width: 520px;
+    text-align: left;
+    order: 2;
+  }
+
+  .VPHero.has-image .image {
+    flex: 1 1 50%;
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .VPHero.has-image .image-container {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .VPHero.has-image .image-src {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--vp-c-divider);
+    background-color: #ffffff;
+  }
+}

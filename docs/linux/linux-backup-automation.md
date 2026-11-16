@@ -4,7 +4,7 @@ An enterprise-pattern automated backup architecture written in Bash, utilizing `
 
 ---
 
-## 🏗️ Architecture & Backup Workflow
+## Architecture & Backup Workflow
 
 ```mermaid
 flowchart TD
@@ -20,15 +20,15 @@ flowchart TD
     Timer --> Service
     Service --> Script
     Script --> Source
-    Source -- "rsync --backup --backup-dir" --> Target
+    Source - "rsync --backup --backup-dir" --> Target
     Target --> Current
     Target --> Incremental
-    Script -- "Exit Code == 0 Ping" --> Health
+    Script - "Exit Code == 0 Ping" --> Health
 ```
 
 ---
 
-## 📄 Production Script Implementation (`backup.sh`)
+## Production Script Implementation (`backup.sh`)
 
 ```bash
 #!/bin/bash
@@ -76,7 +76,7 @@ echo "Backup completed successfully on ${current_date}."
 
 ---
 
-## ⚙️ Native Systemd Automation
+## Native Systemd Automation
 
 Rather than relying on legacy crontabs, the backup routine is managed via `systemd` units for robust journal logging, process dependency tracking, and missed-schedule catchups (`Persistent=true`).
 
@@ -113,7 +113,7 @@ WantedBy=timers.target
 
 ---
 
-## 🚀 Deployment & Operations
+## Deployment & Operations
 
 ```bash
 # 1. Install script to system binary path with strict permissions

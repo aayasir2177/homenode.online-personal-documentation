@@ -4,7 +4,7 @@ Hands-on deployment of an accelerated Jellyfin media streaming server in a homel
 
 ---
 
-## 🎯 Architecture & Strategy
+## Architecture & Strategy
 
 Instead of relying on black-box Helm charts or boilerplate templates, this deployment follows a structured, educational DevOps pattern:
 1. Generate the initial manifest structure imperatively using `kubectl --dry-run=client`.
@@ -27,7 +27,7 @@ flowchart LR
 
 ---
 
-## 🛠️ Step 1: Imperative Manifest Generation
+## Step 1: Imperative Manifest Generation
 
 Start by scaffolding the base deployment without applying it to the cluster:
 
@@ -41,7 +41,7 @@ kubectl create deployment jellyfin \
 
 ---
 
-## 📄 Step 2: Final Production Manifest
+## Step 2: Final Production Manifest
 
 The base manifest is customized with environment variables, security context for GPU access, and persistent volume configurations:
 
@@ -122,7 +122,7 @@ spec:
 
 ---
 
-## ⚡ Hardware Transcoding Verification
+## Hardware Transcoding Verification
 
 Once the pod is running, verify that Jellyfin can access the Intel render nodes:
 
@@ -131,7 +131,7 @@ Once the pod is running, verify that Jellyfin can access the Intel render nodes:
 kubectl get pods -n media -l app=jellyfin
 
 # Verify GPU device visibility inside the container
-kubectl exec -it -n media deploy/jellyfin -- ls -la /dev/dri
+kubectl exec -it -n media deploy/jellyfin - ls -la /dev/dri
 ```
 
 Expected output:

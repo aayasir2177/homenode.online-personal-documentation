@@ -4,7 +4,7 @@ Infrastructure as Code (IaC) configuration management and automated provisioning
 
 ---
 
-## 🏗️ Architecture & Control Topology
+## Architecture & Control Topology
 
 ```mermaid
 flowchart TD
@@ -16,14 +16,14 @@ flowchart TD
         File["[file_servers]<br/>192.168.122.83 (Samba / NFS)"]
     end
 
-    Control -- "SSH (key auth as simone)" --> Web
-    Control -- "SSH (key auth as simone)" --> File
+    Control - "SSH (key auth as simone)" --> Web
+    Control - "SSH (key auth as simone)" --> File
     Control --> Inventory
 ```
 
 ---
 
-## ⚙️ Global Configuration (`ansible.cfg`)
+## Global Configuration (`ansible.cfg`)
 
 ```ini
 [defaults]
@@ -49,7 +49,7 @@ result_format = yaml
 
 ---
 
-## 🚀 Bootstrap Playbook (`bootstrap.yaml`)
+## Bootstrap Playbook (`bootstrap.yaml`)
 
 Ensures newly created KVM nodes are updated, creates an administrative automation service user (`simone`), configures passwordless sudo, and deploys SSH public keys:
 
@@ -95,7 +95,7 @@ Ensures newly created KVM nodes are updated, creates an administrative automatio
 
 ---
 
-## 📦 Modular Roles & Site Orchestration (`site.yaml`)
+## Modular Roles & Site Orchestration (`site.yaml`)
 
 ```yaml
 ---
@@ -134,7 +134,7 @@ Ensures newly created KVM nodes are updated, creates an administrative automatio
 
 ---
 
-## 💡 Practical Ansible Ad-Hoc Commands
+## Practical Ansible Ad-Hoc Commands
 
 Run ad-hoc tasks across the inventory without writing YAML:
 

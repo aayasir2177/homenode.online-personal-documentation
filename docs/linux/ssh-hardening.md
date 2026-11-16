@@ -4,7 +4,7 @@ Comprehensive configuration for modern, cryptographic SSH authentication using E
 
 ---
 
-## 🔑 Cryptographic Key Generation (Client)
+## Cryptographic Key Generation (Client)
 
 Modern security standards favor **Ed25519** elliptic-curve cryptography over legacy RSA (which requires 4096-bit keylengths for equivalent security and suffers higher compute overhead).
 
@@ -18,7 +18,7 @@ ssh-copy-id -i ~/.ssh/id_ed25519.pub ubuntu@<REMOTE_SERVER_IP>
 
 ---
 
-## ⚡ Client Automation (`~/.ssh/config`)
+## Client Automation (`~/.ssh/config`)
 
 Instead of memorizing IP addresses, custom ports, and key paths, define structured connection aliases in `~/.ssh/config`:
 
@@ -47,7 +47,7 @@ ssh aws-ec2
 
 ---
 
-## 🛡️ Server Daemon Hardening (`sshd_config`)
+## Server Daemon Hardening (`sshd_config`)
 
 Apply defense-in-depth hardening to `/etc/ssh/sshd_config` on the target server:
 

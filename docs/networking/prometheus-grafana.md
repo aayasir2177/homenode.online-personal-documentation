@@ -4,7 +4,7 @@ A comprehensive infrastructure observability stack running on Docker, capturing 
 
 ---
 
-## 🏗️ Observability Architecture
+## Observability Architecture
 
 ```mermaid
 flowchart TD
@@ -17,8 +17,8 @@ flowchart TD
         Graf["Grafana Dashboard (:3000)"]
     end
 
-    NodeExp -- "Scrapes /metrics every 5s" --> Prom
-    Prom -- "PromQL Query Engine" --> Graf
+    NodeExp - "Scrapes /metrics every 5s" --> Prom
+    Prom - "PromQL Query Engine" --> Graf
     Client["DevOps Engineer / Browser"] --> Graf
 ```
 
@@ -28,7 +28,7 @@ flowchart TD
 
 ---
 
-## 🐳 Docker Compose Deployment (`compose.yaml`)
+## Docker Compose Deployment (`compose.yaml`)
 
 ```yaml
 services:
@@ -66,7 +66,7 @@ networks:
 
 ---
 
-## ⚙️ Prometheus Scrape Target Configuration (`prometheus.yml`)
+## Prometheus Scrape Target Configuration (`prometheus.yml`)
 
 ```yaml
 global:
@@ -87,7 +87,7 @@ scrape_configs:
 
 ---
 
-## 🔧 Production Troubleshooting & Post-Mortem
+## Production Troubleshooting & Post-Mortem
 
 ### 1. The "localhost" Container Trap
 * **Symptom**: Prometheus threw `connection refused` when scraping `localhost:9100`.
@@ -121,7 +121,7 @@ sudo systemctl enable --now node_exporter
 
 ---
 
-## 📊 Useful PromQL Queries
+## Useful PromQL Queries
 
 | Metric Objective | PromQL Expression |
 | :--- | :--- |

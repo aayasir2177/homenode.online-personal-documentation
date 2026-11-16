@@ -4,7 +4,7 @@ Step-by-step production installation of a WordPress CMS powered by a classic **L
 
 ---
 
-## 🏗️ Architecture & Component Flow
+## Architecture & Component Flow
 
 ```mermaid
 flowchart LR
@@ -14,15 +14,15 @@ flowchart LR
     MySQL["MySQL Database Server (:3306)"]
     Storage["Static Web Assets (/home/wordpress/public_html)"]
 
-    Client -- HTTP Request --> Nginx
-    Nginx -- "Static Assets (CSS, JS, Images)" --> Storage
-    Nginx -- "Dynamic PHP Queries" --> PHPFPM
+    Client - HTTP Request --> Nginx
+    Nginx - "Static Assets (CSS, JS, Images)" --> Storage
+    Nginx - "Dynamic PHP Queries" --> PHPFPM
     PHPFPM <--> MySQL
 ```
 
 ---
 
-## 📦 1. Package Installation & System Hardening
+## 1. Package Installation & System Hardening
 
 ```bash
 # Update repositories
@@ -37,13 +37,13 @@ sudo mysql_secure_installation
 
 ---
 
-## 🗄️ 2. Database Initialization
+## 2. Database Initialization
 
 ```sql
--- Access MySQL shell
+- Access MySQL shell
 sudo mysql
 
--- Create dedicated database and privileged service user
+- Create dedicated database and privileged service user
 CREATE DATABASE wordpress_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 CREATE USER 'wp_user'@'localhost' IDENTIFIED BY 'StrongRandomPassword123!';
 GRANT ALL PRIVILEGES ON wordpress_db.* TO 'wp_user'@'localhost';
@@ -53,7 +53,7 @@ EXIT;
 
 ---
 
-## 📂 3. Web Directory & WordPress Setup
+## 3. Web Directory & WordPress Setup
 
 ```bash
 # Download latest stable WordPress release
@@ -80,7 +80,7 @@ define( 'DB_CHARSET', 'utf8mb4' );
 
 ---
 
-## 🌐 4. Nginx Server Block Configuration
+## 4. Nginx Server Block Configuration
 
 Create `/etc/nginx/sites-available/wordpress.conf`:
 
@@ -124,7 +124,7 @@ sudo systemctl reload nginx
 
 ---
 
-## 🔍 Post-Mortem: Troubleshooting 404 / 403 Errors
+## Post-Mortem: Troubleshooting 404 / 403 Errors
 
 * **Problem**: Nginx threw `404 Not Found` or `403 Forbidden` after initial deployment.
 * **Root Cause Analysis**: Inspecting `/var/log/nginx/error.log` via `sudo tail -n 25 /var/log/nginx/error.log` revealed permission denied errors on parent folders (`/home/wordpress/`). Nginx worker processes run as `www-data` and lacked traversal rights.

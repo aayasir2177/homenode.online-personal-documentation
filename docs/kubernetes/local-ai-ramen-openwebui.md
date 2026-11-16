@@ -6,7 +6,7 @@ This architecture eliminates prompt prefill lag on resource-constrained hardware
 
 ---
 
-## 🏗️ Architecture & Data Flow
+## Architecture & Data Flow
 
 ```mermaid
 flowchart LR
@@ -20,7 +20,7 @@ flowchart LR
     Client --> CF
     CF --> K8sUI
     K8sUI --- PVC
-    K8sUI -- "Local Network (:8090/v1)" --> RAMen
+    K8sUI - "Local Network (:8090/v1)" --> RAMen
     RAMen <--> SSD
 ```
 
@@ -31,18 +31,18 @@ flowchart LR
 
 ---
 
-## ⚡ Why This Architecture?
+## Why This Architecture?
 
 | Challenge | Standard Containerized Inference | Hybrid Bare-Metal + RAMen AI |
 | :--- | :--- | :--- |
-| **Prompt Prefill (TTFT)** | Recalculates entire chat history every turn (30–60s CPU lockup) | Restores KV-cache from SSD in ~50ms (Zero-Recompute) |
-| **Context Window** | Unconstrained 19K–51K tokens freeze low-power CPUs | Strict 2,048-token cap (`--ctx 2048`) maintains fluid token output |
+| **Prompt Prefill (TTFT)** | Recalculates entire chat history every turn (30-60s CPU lockup) | Restores KV-cache from SSD in ~50ms (Zero-Recompute) |
+| **Context Window** | Unconstrained 19K-51K tokens freeze low-power CPUs | Strict 2,048-token cap (`--ctx 2048`) maintains fluid token output |
 | **CPU Execution** | Throttled by container cgroups virtualization | Direct bare-metal execution with full AVX instructions |
 | **Public Exposure** | Requires port forwarding or dynamic DNS | Encrypted outbound Cloudflare QUIC tunnel |
 
 ---
 
-## 🛠️ Step-by-Step Implementation
+## Step-by-Step Implementation
 
 ### 1. Host Preparation & RAMen Launch
 
@@ -128,7 +128,7 @@ spec:
 
 ---
 
-## 🔍 Validation & Benchmarks
+## Validation & Benchmarks
 
 1. **Verify Pod Status**:
    ```bash
@@ -136,7 +136,7 @@ spec:
    ```
 2. **Test In-Cluster DNS / HTTP connectivity**:
    ```bash
-   kubectl exec -it -n ai deploy/openwebui -- curl -s http://192.168.122.1:8090/v1/models
+   kubectl exec -it -n ai deploy/openwebui - curl -s http://192.168.122.1:8090/v1/models
    ```
 3. **KV-Cache Verification**:
    Inspect `~/.context-engine/sessions` on the host to verify attention slot serialization after consecutive prompt turns. Tokens are processed with zero recalculation lag.

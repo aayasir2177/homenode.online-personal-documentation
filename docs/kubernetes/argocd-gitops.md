@@ -4,7 +4,7 @@ Automated, continuous GitOps delivery pipeline running on a local home server wi
 
 ---
 
-## ⚡ System Architecture & Data Flow
+## System Architecture & Data Flow
 
 Every `git push` triggers an HMAC-authenticated webhook payload through the Cloudflare edge directly to the ArgoCD API server. This completely eliminates ArgoCD's default 3-minute poll interval, reconciling workloads in **sub-5 seconds**.
 
@@ -12,7 +12,7 @@ Every `git push` triggers an HMAC-authenticated webhook payload through the Clou
 
 ---
 
-## 🏛️ Core Pillars of the Architecture
+## Core Pillars of the Architecture
 
 | Pillar | Technical Mechanism | Production Benefit |
 | :--- | :--- | :--- |
@@ -24,7 +24,7 @@ Every `git push` triggers an HMAC-authenticated webhook payload through the Clou
 
 ---
 
-## 🔄 Deployment Lifecycle: Push to Live in < 5s
+## Deployment Lifecycle: Push to Live in < 5s
 
 ```mermaid
 sequenceDiagram
@@ -46,7 +46,7 @@ sequenceDiagram
 
 ---
 
-## 🛠️ Step-by-Step Configuration
+## Step-by-Step Configuration
 
 ### 1. Cloudflare Tunnel Deployment in Kubernetes
 
@@ -162,7 +162,7 @@ spec:
 
 ---
 
-## 🔍 Verification & Troubleshooting
+## Verification & Troubleshooting
 
 To monitor webhook arrival in real time, stream logs from the ArgoCD API server:
 
