@@ -65,3 +65,16 @@
     background-color: #ffffff;
   }
 }
+
+/* Mermaid Diagram Container */
+.mermaid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
+  background-color: var(--vp-c-bg-soft);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--vp-c-divider);
+  overflow-x: auto;
+}
