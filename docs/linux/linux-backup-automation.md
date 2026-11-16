@@ -15,7 +15,7 @@ flowchart TD
     Target["NFS Mount Target (/mnt/backup/)"]
     Current["/mnt/backup/current/ (Mirror)"]
     Incremental["/mnt/backup/incremental_backups/YYYY-MM-DD/ (Diffs)"]
-    Health["healthchecks.io (Alerting & Monitoring)"]
+    Health["healthchecks.io (Alerting and Monitoring)"]
 
     Timer --> Service
     Service --> Script

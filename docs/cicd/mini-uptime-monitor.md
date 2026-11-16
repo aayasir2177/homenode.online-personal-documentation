@@ -9,17 +9,17 @@ A modern, production-pattern microservices application designed for practicing *
 ```mermaid
 flowchart TD
     subgraph ClientLayer["User Interface"]
-        UI["Next.js 15 App Router (Port 3000)<br/>TypeScript & Tailwind CSS"]
+        UI["Next.js 15 App Router (Port 3000)<br/>TypeScript and Tailwind CSS"]
     end
 
-    subgraph ServiceLayer["API & Probe Engine"]
+    subgraph ServiceLayer["API and Probe Engine"]
         API["Express.js Service (Port 5001)<br/>TypeScript Engine"]
-        Engine["30s Background Health Check & Latency Timer"]
+        Engine["30s Background Health Check and Latency Timer"]
     end
 
     subgraph TargetLayer["Monitored Targets"]
         T1["Target Website A (HTTP 200 OK)"]
-        T2["Target Website B (Latency & Health)"]
+        T2["Target Website B (Latency and Health)"]
     end
 
     UI - "REST API / Status Fetch" --> API
@@ -45,8 +45,8 @@ flowchart LR
     Push --> J2["frontend-ci<br/>Node 22, npm ci, next build"]
     J1 --> J3{"Both Passed?"}
     J2 --> J3
-    J3 - Yes --> J4["docker-build (Docker Buildx)<br/>Build multi-stage containers & push to ghcr.io"]
-    J3 - No --> Fail["Pipeline Fails & Blocks Merge"]
+    J3 - Yes --> J4["docker-build (Docker Buildx)<br/>Build multi-stage containers and push to ghcr.io"]
+    J3 - No --> Fail["Pipeline Fails and Blocks Merge"]
 ```
 
 ### Complete Workflow Definition:

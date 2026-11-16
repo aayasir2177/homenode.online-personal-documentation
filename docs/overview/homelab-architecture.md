@@ -45,7 +45,7 @@ Default GitOps tooling relies on a polling loop (frequently set to 3 minutes in 
 flowchart TD
     subgraph Internet["Public Internet"]
         User["User / Mobile Client"]
-        GitHub["GitHub Webhook & Actions"]
+        GitHub["GitHub Webhook and Actions"]
     end
 
     subgraph CF["Cloudflare Edge Network"]
@@ -65,8 +65,8 @@ flowchart TD
 
         subgraph LocalHost["Fedora Server Host"]
             RAMen["RAMen AI Engine (:8090)"]
-            DockerStacks["Portainer & Compose Stacks"]
-            Monitoring["Prometheus & Grafana"]
+            DockerStacks["Portainer and Compose Stacks"]
+            Monitoring["Prometheus and Grafana"]
             DNS["Pi-hole Local DNS Resolver"]
         end
 

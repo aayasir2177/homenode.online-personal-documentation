@@ -32,7 +32,7 @@ sequenceDiagram
         Authelia-->>Caddy: 401 Unauthorized
         Caddy-->>Client: 302 Redirect to https://auth.home.server
         Client->>Authelia: Authenticate (Password / 2FA)
-        Authelia-->>Client: Set-Cookie: authelia_session & Redirect back
+        Authelia-->>Client: Set-Cookie: authelia_session and Redirect back
     end
 ```
 

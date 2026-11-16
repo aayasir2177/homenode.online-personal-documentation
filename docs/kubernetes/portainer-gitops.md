@@ -11,7 +11,7 @@ flowchart TD
     GitRepo["Git Repository (homelab-gitops)"]
     Portainer["Portainer CE (Fedora Server)"]
     HostFS["Host Storage (/srv/service_name/)"]
-    Containers["Docker Engine & Container Stacks"]
+    Containers["Docker Engine and Container Stacks"]
 
     GitRepo - "Automated Polling / Webhook" --> Portainer
     Portainer - "Inject Runtime Environment Secrets" --> Containers

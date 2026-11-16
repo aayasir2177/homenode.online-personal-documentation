@@ -31,17 +31,17 @@ sequenceDiagram
     autonumber
     actor Dev as Developer
     participant GH as GitHub Repository
-    participant CF as Cloudflare Edge & Tunnel
+    participant CF as Cloudflare Edge and Tunnel
     participant Argo as ArgoCD API Server
     participant K8s as Kubernetes Cluster
 
     Dev->>GH: git push origin main
     GH->>CF: POST /api/webhook (HMAC X-Hub-Signature-256)
     CF->>Argo: Forward payload over encrypted QUIC tunnel
-    Argo->>Argo: Validate HMAC secret & match Application
+    Argo->>Argo: Validate HMAC secret and match Application
     Argo->>GH: Fetch updated manifests (Authenticated via Secret PAT)
     Argo->>K8s: Apply Delta (kubectl apply / prune deprecated)
-    K8s-->>Dev: Pod updated & running (< 5s total elapsed)
+    K8s-->>Dev: Pod updated and running (< 5s total elapsed)
 ```
 
 ---

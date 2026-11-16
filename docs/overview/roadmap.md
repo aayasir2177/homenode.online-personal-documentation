@@ -16,40 +16,40 @@ Welcome to the central documentation of my DevOps engineering journey. This road
 
 ---
 
-## Progressive Roadmap & Competencies
+## Progressive Roadmap and Competencies
 
 ```mermaid
 flowchart TD
-    subgraph S1["1. Linux & Systems"]
-        A1[Linux Administration & RHCSA 9] --> A2[Bash Scripting & Automation]
-        A2 --> A3[Systemd Services & Timers]
-        A3 --> A4[NFS & Storage Protocols]
+    subgraph S1["1. Linux and Systems"]
+        A1["Linux Administration and RHCSA 9"] --> A2["Bash Scripting and Automation"]
+        A2 --> A3["Systemd Services and Timers"]
+        A3 --> A4["NFS and Storage Protocols"]
     end
 
-    subgraph S2["2. Networking & Security"]
-        B1[DNS & Pi-hole Resolution] --> B2[Nginx & Caddy Reverse Proxies]
-        B2 --> B3[SSH Key Hardening]
-        B3 --> B4[Forward Auth & Authelia SSO]
-        B4 --> B5[Cloudflare Zero Trust Tunnels]
+    subgraph S2["2. Networking and Security"]
+        B1["DNS and Pi-hole Resolution"] --> B2["Nginx and Caddy Reverse Proxies"]
+        B2 --> B3["SSH Key Hardening"]
+        B3 --> B4["Forward Auth and Authelia SSO"]
+        B4 --> B5["Cloudflare Zero Trust Tunnels"]
     end
 
-    subgraph S3["3. Containers & CI/CD"]
-        C1[Docker & Multi-Stage Builds] --> C2[Docker Compose Stacks]
-        C2 --> C3[GitHub Actions CI/CD]
-        C3 --> C4[Automated Testing & GHCR]
+    subgraph S3["3. Containers and CI/CD"]
+        C1["Docker and Multi-Stage Builds"] --> C2["Docker Compose Stacks"]
+        C2 --> C3["GitHub Actions CI/CD"]
+        C3 --> C4["Automated Testing and GHCR"]
     end
 
-    subgraph S4["4. Kubernetes & GitOps"]
-        D1[Cluster Deployment & Networking] --> D2[Kustomize Manifest Bundles]
-        D2 --> D3[Persistent Storage & PVCs]
-        D3 --> D4[ArgoCD Zero-Delay GitOps]
-        D4 --> D5[GPU Passthrough & AI Stacks]
+    subgraph S4["4. Kubernetes and GitOps"]
+        D1["Cluster Deployment and Networking"] --> D2["Kustomize Manifest Bundles"]
+        D2 --> D3["Persistent Storage and PVCs"]
+        D3 --> D4["ArgoCD Zero-Delay GitOps"]
+        D4 --> D5["GPU Passthrough and AI Stacks"]
     end
 
-    subgraph S5["5. Observability & IaC"]
-        E1[Prometheus Metrics Scraping] --> E2[Node Exporter on Hosts]
-        E2 --> E3[Grafana Dashboards & Alerting]
-        E3 --> E4[Ansible Playbooks & Roles]
+    subgraph S5["5. Observability and IaC"]
+        E1["Prometheus Metrics Scraping"] --> E2["Node Exporter on Hosts"]
+        E2 --> E3["Grafana Dashboards and Alerting"]
+        E3 --> E4["Ansible Playbooks and Roles"]
     end
 
     S1 --> S2
