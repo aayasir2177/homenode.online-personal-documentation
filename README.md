@@ -81,3 +81,4 @@ npm run preview
 docker compose up -d --build
 ```
 The documentation will be served over high-performance Nginx Alpine on `http://localhost:8080` (or behind your reverse proxy on `https://homenode.online`).
+# homenode.online-personal-documentation
