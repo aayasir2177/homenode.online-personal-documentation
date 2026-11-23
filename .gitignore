@@ -1,8 +1,27 @@
-node_modules
-docs/.vitepress/dist
-docs/.vitepress/cache
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Next.js build output
+.next/
+out/
+
+# Production artifacts
+build/
+dist/
+
+# Misc
 .DS_Store
+*.pem
 *.log
 .env
+.env*.local
+
+# Python artifacts
 __pycache__/
 *.pyc
+
+# IDEs
+.vscode/
+.idea/

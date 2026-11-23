@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+:root {
+  /* Dark Theme Palette (Default) */
+  --bg-primary: #090d16;
+  --bg-secondary: #0f1523;
+  --bg-card: #141c2e;
+  --bg-card-hover: #19243b;
+  --bg-surface: #1e293b;
+  --bg-elevated: #26334d;
+  
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(56, 189, 248, 0.3);
+  --border-focus: #38bdf8;
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  
+  /* Brand Accents */
+  --accent-cyan: #38bdf8;
+  --accent-emerald: #10b981;
+  --accent-indigo: #818cf8;
+  --accent-amber: #f59e0b;
+  --accent-rose: #f43f5e;
+  
+  --accent-glow: rgba(56, 189, 248, 0.15);
+  
+  /* Category Badges */
+  --cat-devops-bg: rgba(56, 189, 248, 0.12);
+  --cat-devops-text: #38bdf8;
+  --cat-linux-bg: rgba(245, 158, 11, 0.12);
+  --cat-linux-text: #fbbf24;
+  --cat-web-bg: rgba(129, 140, 248, 0.12);
+  --cat-web-text: #a5b4fc;
+  --cat-mobile-bg: rgba(16, 185, 129, 0.12);
+  --cat-mobile-text: #34d399;
+  --cat-ai-bg: rgba(244, 63, 94, 0.12);
+  --cat-ai-text: #fb7185;
+
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace;
+}
+
+[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8fafc;
+  --bg-surface: #e2e8f0;
+  --bg-elevated: #cbd5e1;
+  
+  --border-color: rgba(0, 0, 0, 0.08);
+  --border-hover: rgba(2, 132, 199, 0.35);
+  --border-focus: #0284c7;
+  
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-dim: #94a3b8;
+  
+  --accent-cyan: #0284c7;
+  --accent-emerald: #059669;
+  --accent-indigo: #4f46e5;
+  --accent-amber: #d97706;
+  --accent-rose: #e11d48;
+  
+  --accent-glow: rgba(2, 132, 199, 0.1);
+  
+  --cat-devops-bg: #e0f2fe;
+  --cat-devops-text: #0369a1;
+  --cat-linux-bg: #fef3c7;
+  --cat-linux-text: #b45309;
+  --cat-web-bg: #e0e7ff;
+  --cat-web-text: #4338ca;
+  --cat-mobile-bg: #d1fae5;
+  --cat-mobile-text: #047857;
+  --cat-ai-bg: #ffe4e6;
+  --cat-ai-text: #be123c;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #34d399 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Category colors */
+.cat-devops { background-color: var(--cat-devops-bg); color: var(--cat-devops-text); }
+.cat-linux { background-color: var(--cat-linux-bg); color: var(--cat-linux-text); }
+.cat-web { background-color: var(--cat-web-bg); color: var(--cat-web-text); }
+.cat-mobile { background-color: var(--cat-mobile-bg); color: var(--cat-mobile-text); }
+.cat-ai { background-color: var(--cat-ai-bg); color: var(--cat-ai-text); }
+
+/* Pulse animation */
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.pulse-dot {
+  width: 7px;
+  height: 7px;
+  background-color: var(--accent-emerald);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: pulse-ring 2s infinite;
+}
