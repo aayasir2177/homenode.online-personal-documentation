@@ -1,29 +1,21 @@
 {
-  "name": "homenode-online-docs",
-  "version": "1.0.0",
-  "description": "Personal DevOps, Kubernetes, and Homelab Documentation for homenode.online by Yasir (@aayasir2177)",
+  "name": "homenode-online-portfolio",
+  "version": "2.0.0",
+  "description": "Fast, simple, SEO-optimized, and responsive personal portfolio showcasing 61+ projects by Yasir (@aayasir2177).",
   "scripts": {
-    "dev": "vitepress dev docs",
-    "build": "vitepress build docs",
-    "preview": "vitepress preview docs"
+    "dev": "python3 -m http.server 3000",
+    "serve": "npx serve .",
+    "build:data": "python3 generate_projects.py && python3 generate_all.py"
   },
   "keywords": [
+    "portfolio",
     "devops",
     "kubernetes",
     "gitops",
-    "argocd",
-    "homelab",
-    "ansible",
-    "linux",
-    "prometheus",
-    "grafana",
     "docker",
-    "cicd"
+    "ansible",
+    "homelab"
   ],
-  "author": "Yasir <aayasir217@gmail.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "mermaid": "^11.17.2",
-    "vitepress": "^1.6.4"
-  }
+  "author": "Yasir (@aayasir2177)",
+  "license": "MIT"
 }

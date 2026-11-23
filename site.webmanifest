@@ -1,0 +1,17 @@
+{
+  "name": "HomeNode | Yasir - DevOps Engineer",
+  "short_name": "HomeNode",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090d16",
+  "theme_color": "#090d16",
+  "description": "DevOps Engineer and Homelab Architect showcase portfolio with 61+ projects.",
+  "icons": [
+    {
+      "src": "assets/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

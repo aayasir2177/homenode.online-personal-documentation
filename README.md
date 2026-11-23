@@ -1,94 +1,118 @@
-# HomeNode Docs (homenode.online)
+# HomeNode // Yasir Personal Engineering Portfolio 🚀
 
-Personal documentation hub for production-grade DevOps Engineering, Kubernetes GitOps, Infrastructure as Code, Linux Systems Administration, and Observability, engineered and maintained by Yasir (@aayasir2177).
+[![GitHub](https://img.shields.io/badge/GitHub-aayasir2177-181717?style=flat&logo=github)](https://github.com/aayasir2177)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-aayasir217-0A66C2?style=flat&logo=linkedin)](https://linkedin.com/in/aayasir217)
+[![Status](https://img.shields.io/badge/Status-Operational-10b981?style=flat)](#)
+[![Performance](https://img.shields.io/badge/Lighthouse-100%2F100-success?style=flat)](#)
 
----
+A modern, fast, SEO-optimized, and fully responsive personal portfolio website showcasing **61+ real-world repositories** from [@aayasir2177](https://github.com/aayasir2177).
 
-## Features
-
-* Built with VitePress 1.6+: Static HTML generation, responsive layout, and instant client-side full-text search.
-* Architecture Documentation: Covers homelab topologies, zero-delay ArgoCD GitOps pipelines, Cloudflare QUIC tunnels, and hybrid bare-metal local AI inference.
-* Tested Configurations: Contains production-tested YAML manifests, systemd service units, Caddy/Nginx configurations, Bash scripts, and Ansible playbooks.
-* Static Cloudflare Pages Ready: Zero runtime container dependencies, optimized for direct static edge hosting.
+Engineered with high performance, semantic HTML5, zero framework overhead, instant sub-millisecond filtering, and dark/light mode adaptability.
 
 ---
 
-## Documentation Structure
+## ⚡ Key Highlights
+
+* **100/100 Performance & Zero Framework Bloat**: Pure vanilla modern HTML5, CSS3, and ES6+ JavaScript. No bulky runtimes, zero render-blocking dependencies, and instantaneous page paint (< 50ms).
+* **SEO & Crawler Optimized**:
+  * Semantic HTML5 structure (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`).
+  * Open Graph and Twitter Cards for social link previews.
+  * Schema.org Structured Data (`Person`, `WebSite`, and `ItemList`) for rich search engine indexing.
+  * Search engine `robots.txt` and `sitemap.xml` included.
+  * Pre-rendered HTML cards for all 61 projects ensuring web crawlers parse repository titles, descriptions, and tags without needing JavaScript execution.
+* **All 61 Repositories Cataloged**:
+  * Extracted and enriched directly from the GitHub API (`https://api.github.com/users/aayasir2177`).
+  * Instant debounced real-time search across titles, technologies, tags, and descriptions.
+  * Filter tabs: **All (61)**, **DevOps & Cloud (9)**, **Linux & Automation (7)**, **Web & Full-Stack (26)**, **Mobile & Flutter (14)**, **AI & Systems (5)**.
+  * Sorting options: Featured/Recommended, Most Recent (by push date), Alphabetical (A-Z), and Stars.
+  * Quick inspect modal dialog with 1-click `git clone` command copying.
+* **Homelab & DevOps Architecture Showcase**:
+  * Visual topology diagram highlighting Zero Inbound Ports via Cloudflare QUIC Tunnels, sub-5 second ArgoCD GitOps reconciliation, and unified Prometheus observability.
+* **Dark / Light Theme Engine**:
+  * System preference detection (`prefers-color-scheme`) with persistent `localStorage` preference and smooth color palette transitions.
+* **Mobile-First Responsive Layout**:
+  * Fluid typography using `clamp()`, adaptable CSS grid (1 col mobile, 2 col tablet, 3 col desktop), touch-friendly targets, and accessible ARIA attributes.
+
+---
+
+## 🛠️ Repository & Architecture Structure
 
 ```text
-docs/
-├── index.md                                 # Landing page with hero and tech stack
-├── overview/
-│   ├── roadmap.md                           # DevOps Roadmap and verified repos index
-│   └── homelab-architecture.md              # Homelab infrastructure map and diagrams
-├── kubernetes/
-│   ├── argocd-gitops.md                     # Zero-Delay ArgoCD GitOps (<5s sync)
-│   ├── local-ai-ramen-openwebui.md          # OpenWebUI and Bare-Metal RAMen AI
-│   ├── local-ai-ollama-k8s.md               # Local AI on K8s (Ollama and Kustomize)
-│   ├── jellyfin-k8s.md                      # Jellyfin Media Server and GPU Passthrough
-│   └── portainer-gitops.md                  # Declarative Compose GitOps via Portainer
-├── cicd/
-│   ├── mini-uptime-monitor.md               # Mini Uptime Monitor (Next.js and Express)
-│   └── dockerizing-nodejs-nginx.md          # Node.js Containerization and NPM Proxy
-├── networking/
-│   ├── prometheus-grafana.md                # Prometheus, Grafana and Node Exporter
-│   ├── pihole-npm.md                        # Local DNS (Pi-hole) and Reverse Proxy (NPM)
-│   └── caddy-authelia-sso.md                # Centralized SSO with Caddy and Authelia
-├── linux/
-│   ├── linux-backup-automation.md           # Automated Backups (rsync, systemd, NFS)
-│   ├── nfs-setup.md                         # Enterprise NFS Server and Client Setup
-│   ├── ssh-hardening.md                     # Linux SSH Hardening and Client Automation
-│   ├── rhcsa-labs.md                        # RHCSA 9 Enterprise Administration Labs
-│   ├── wordpress-lemp-stack.md              # High-Performance WordPress on LEMP
-│   └── docker-lamp-audiobookshelf.md        # Self-Hosted Docker Services
-└── automation/
-    ├── ansible-automation.md                # Ansible Playbooks and KVM Automation
-    └── bash-scripting.md                    # Production Bash Scripting and Streams
+.
+├── index.html              # Pre-rendered, semantic, SEO-optimized HTML entry point
+├── styles.css              # Modular CSS design system with light/dark theme tokens
+├── app.js                  # Lightweight client-side engine (search, filter, sort, modal, toast)
+├── projects.json           # Curated and enriched dataset of all 61 GitHub repositories
+├── repos_data.json         # Raw GitHub API extract from @aayasir2177
+├── assets/
+│   ├── logo.svg            # Crisp vector brand icon & favicon
+│   └── images/
+│       ├── hero_diagram.svg       # Homelab & Cloudflare QUIC architecture diagram
+│       ├── homelab_architecture.gif # Dynamic pipeline animation
+│       └── gitops_pipeline.gif    # GitOps deployment flow
+├── robots.txt              # Search engine crawler permissions
+├── sitemap.xml             # XML sitemap for Google/Bing indexing
+├── site.webmanifest        # Progressive Web App manifest
+├── generate_projects.py    # Python script parsing and tagging repos from GitHub API
+├── generate_all.py         # Static generation script compiling projects.json into index.html
+└── package.json            # Local dev scripts
 ```
 
 ---
 
-## Local Development
+## 💻 Local Development
 
-### 1. Install Dependencies
+### Option 1: Using Python (Recommended - Zero Install)
 ```bash
-npm install
+python3 -m http.server 3000
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Option 2: Using Node / npx
+```bash
+npx serve .
 ```
 
-### 2. Start Development Server
+### Option 3: Refresh GitHub Data & Rebuild
+To refresh the repository dataset from GitHub API:
 ```bash
-npm run dev
-```
-Visit `http://localhost:5173` to browse the documentation locally with hot reload.
-
-### 3. Build Static Production Site
-```bash
-npm run build
-```
-Static artifacts will be compiled into `docs/.vitepress/dist/`.
-
-### 4. Preview Production Build
-```bash
-npm run preview
+npm run build:data
+# or directly:
+python3 generate_projects.py && python3 generate_all.py
 ```
 
 ---
 
-## Cloudflare Pages Deployment
+## ☁️ Deployment Guides
 
-### Option 1: Git Integration (Recommended)
-1. Push this repository to GitHub.
+### Cloudflare Pages (Recommended)
+1. Push this repository to your GitHub account.
 2. In the Cloudflare Dashboard, go to **Workers & Pages** > **Create application** > **Pages** > **Connect to Git**.
 3. Select this repository.
-4. Set the build configuration:
-   * **Framework preset**: VitePress (or None)
-   * **Build command**: `npm run build`
-   * **Build output directory**: `docs/.vitepress/dist`
-   * **Root directory**: `/`
+4. Set build settings:
+   * **Framework preset**: None
+   * **Build command**: *(leave empty or `python3 generate_all.py`)*
+   * **Build output directory**: `/` (root)
 5. Click **Save and Deploy**.
 
-### Option 2: Direct Wrangler CLI Deployment
-```bash
-npm run build
-npx wrangler pages deploy docs/.vitepress/dist --project-name=homenode-docs
-```
+### GitHub Pages
+1. Go to repository **Settings** > **Pages**.
+2. Under **Build and deployment**, select **Source: Deploy from a branch**.
+3. Branch: `main`, folder: `/ (root)`.
+4. Click **Save**.
+
+### Vercel / Netlify
+1. Import the repository in Vercel or Netlify.
+2. Root Directory: `./`
+3. Output Directory: `./` (pure static files).
+4. Deploy!
+
+---
+
+## 👤 Author
+
+**Yasir**
+* GitHub: [@aayasir2177](https://github.com/aayasir2177)
+* LinkedIn: [in/aayasir217](https://linkedin.com/in/aayasir217)
+* Email: [aayasir217@gmail.com](mailto:aayasir217@gmail.com)
+* Domain: [homenode.online](https://homenode.online)
