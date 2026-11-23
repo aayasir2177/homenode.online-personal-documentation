@@ -7,21 +7,23 @@
 [![GitHub](https://img.shields.io/badge/GitHub-aayasir2177-181717?style=flat&logo=github)](https://github.com/aayasir2177)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-aayasir217-0A66C2?style=flat&logo=linkedin)](https://linkedin.com/in/aayasir217)
 
-A modern, fast, SEO-optimized, and fully responsive personal portfolio website engineered with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, and **Tailwind CSS v4**, showcasing **61+ repositories** extracted from [@aayasir2177](https://github.com/aayasir2177).
+A modern, fast, SEO-optimized, and fully responsive personal portfolio website engineered with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, and **Tailwind CSS v4**, showcasing **21 curated DevOps, Kubernetes, Linux, and AI engineering repositories** from [@aayasir2177](https://github.com/aayasir2177).
 
 ---
 
 ## ⚡ Key Highlights
 
+* **100% Focused on DevOps & Systems**:
+  * Cleanly curated to highlight core engineering disciplines: **DevOps & Cloud (9)**, **Linux & Automation (7)**, and **AI & Systems (5)**.
 * **Next.js 16 App Router & React 19**: Server-rendered and pre-generated static pages (`output: 'export'`) for sub-50ms instantaneous initial paint and zero runtime hydration issues.
 * **SEO & Crawler Optimized**:
   * Semantic HTML5 structure with native Next.js Metadata API.
   * Open Graph and Twitter Card tags with responsive avatar embeds.
   * Schema.org Structured Data (`Person`, `WebSite`, and `ItemList`) with featured project rich snippets.
   * Dynamic native Next.js metadata routes: `app/sitemap.ts`, `app/robots.ts`, and `app/manifest.ts`.
-* **All 61 Repositories Cataloged & Interactive**:
+* **Interactive Repository Explorer**:
   * Live debounced search across repository titles, descriptions, technologies, and languages.
-  * Category filter tabs with live counts: **All (61)**, **DevOps & Cloud (9)**, **Linux & Automation (7)**, **Web & Full-Stack (26)**, **Mobile & Flutter (14)**, **AI & Systems (5)**.
+  * Category filter tabs with live counts: **All (21)**, **DevOps & Cloud (9)**, **Linux & Automation (7)**, **AI & Systems (5)**.
   * Real-time sorting: Recommended / Featured, Recently Pushed, Alphabetical (A–Z), and Stars.
   * Interactive Project Modal with architecture impact statement and **1-click copyable `git clone` command**.
 * **Flagship Implementations Section**:
@@ -66,7 +68,7 @@ A modern, fast, SEO-optimized, and fully responsive personal portfolio website e
 │   ├── Footer.tsx              # Brand footer with navigation & scroll-to-top button
 │   └── ThemeToggle.tsx         # Dark/Light mode switcher with persistence
 ├── data/
-│   ├── projects.ts             # Type-safe dataset of all 61 GitHub repositories
+│   ├── projects.ts             # Type-safe dataset of 21 DevOps & Cloud repositories
 │   └── siteConfig.ts           # Site-wide constants, social links, bio & metrics
 ├── public/
 │   ├── logo.svg                # Brand icon and favicon
@@ -111,7 +113,7 @@ npx serve out
 
 ## ☁️ Deployment
 
-### Option 1: Cloudflare Pages (Recommended)
+### Cloudflare Pages (Recommended)
 1. Push this repository to GitHub.
 2. In Cloudflare Dashboard, go to **Workers & Pages** > **Create application** > **Pages** > **Connect to Git**.
 3. Select this repository.
@@ -121,11 +123,7 @@ npx serve out
    * **Build output directory**: `out`
 5. Click **Save and Deploy**.
 
-### Option 2: GitHub Pages
-1. Go to repository **Settings** > **Pages**.
-2. Under **Build and deployment**, choose **GitHub Actions** or use `npm run build` with `gh-pages -d out`.
-
-### Option 3: Vercel
+### Vercel
 1. Import repository on [Vercel](https://vercel.com).
 2. Framework Preset: **Next.js**.
 3. Click **Deploy**.

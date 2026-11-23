@@ -22,7 +22,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-xs sm:text-sm text-[var(--text-muted)] leading-relaxed">
-              Designed and engineered by <strong className="text-[var(--text-primary)]">{SITE_CONFIG.name}</strong> (@{SITE_CONFIG.handle}). High-performance Next.js App Router architecture with zero bloat and instant responsive rendering.
+              Designed and engineered by <strong className="text-[var(--text-primary)]">{SITE_CONFIG.name}</strong> (@{SITE_CONFIG.handle}). High-performance Next.js App Router architecture focused on Kubernetes GitOps, containerization, and Linux infrastructure.
             </p>
           </div>
 
@@ -40,7 +40,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link href="#projects" className="hover:text-[var(--accent-cyan)] transition-colors">
-                    All 61 Projects
+                    All 21 Projects
                   </Link>
                 </li>
                 <li>

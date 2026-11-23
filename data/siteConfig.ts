@@ -2,7 +2,7 @@ export const SITE_CONFIG = {
   name: "Yasir",
   handle: "aayasir2177",
   title: "Yasir | DevOps Engineer & Homelab Architect — Portfolio & Projects",
-  description: "Personal website & engineering portfolio of Yasir (@aayasir2177). Showcasing 61+ projects across Kubernetes, GitOps, Docker, Ansible, Linux automation, and full-stack development.",
+  description: "Personal website & engineering portfolio of Yasir (@aayasir2177). Showcasing 21 curated projects across Kubernetes, GitOps, Docker, Ansible, Linux administration, and private AI infrastructure.",
   url: "https://homenode.online",
   ogImage: "https://avatars.githubusercontent.com/u/44633211?v=4",
   email: "aayasir217@gmail.com",
@@ -12,7 +12,7 @@ export const SITE_CONFIG = {
     linkedin: "https://linkedin.com/in/aayasir217",
   },
   metrics: [
-    { value: "61", label: "Repositories" },
+    { value: "21", label: "DevOps Repositories" },
     { value: "<5s", label: "GitOps Reconcile" },
     { value: "0", label: "Inbound Ports" },
     { value: "100%", label: "Declarative State" },
@@ -39,9 +39,9 @@ export const SITE_CONFIG = {
       skills: ["Prometheus", "Grafana", "Node Exporter", "Pi-hole DNS", "Caddy Server", "Nginx Reverse Proxy", "Authelia SSO"]
     },
     {
-      title: "Languages & Stacks",
+      title: "Scripting & Systems",
       icon: "Code",
-      skills: ["Python", "TypeScript", "JavaScript (ES6+)", "Dart & Flutter", "Node.js / Express", "React / Next.js", "HTML5 / Modern CSS"]
+      skills: ["Python", "Bash / Shell", "YAML / JSON", "TypeScript", "Node.js", "SQL", "Go (Basics)"]
     },
     {
       title: "Databases & Storage",

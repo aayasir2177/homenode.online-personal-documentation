@@ -12,7 +12,7 @@ interface ProjectsExplorerProps {
 
 export default function ProjectsExplorer({ initialProjects }: ProjectsExplorerProps) {
   const [search, setSearch] = useState('');
-  const [category, setCategory] = useState<'all' | 'devops' | 'linux' | 'web' | 'mobile' | 'ai'>('all');
+  const [category, setCategory] = useState<'all' | 'devops' | 'linux' | 'ai'>('all');
   const [sort, setSort] = useState<'featured' | 'recent' | 'name' | 'stars'>('featured');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
@@ -22,8 +22,6 @@ export default function ProjectsExplorer({ initialProjects }: ProjectsExplorerPr
       all: initialProjects.length,
       devops: initialProjects.filter((p) => p.category === 'devops').length,
       linux: initialProjects.filter((p) => p.category === 'linux').length,
-      web: initialProjects.filter((p) => p.category === 'web').length,
-      mobile: initialProjects.filter((p) => p.category === 'mobile').length,
       ai: initialProjects.filter((p) => p.category === 'ai').length,
     };
   }, [initialProjects]);
@@ -69,12 +67,10 @@ export default function ProjectsExplorer({ initialProjects }: ProjectsExplorerPr
     setSort('featured');
   };
 
-  const categories: Array<{ id: 'all' | 'devops' | 'linux' | 'web' | 'mobile' | 'ai'; label: string; count: number }> = [
+  const categories: Array<{ id: 'all' | 'devops' | 'linux' | 'ai'; label: string; count: number }> = [
     { id: 'all', label: 'All', count: counts.all },
     { id: 'devops', label: 'DevOps & Cloud', count: counts.devops },
     { id: 'linux', label: 'Linux & Automation', count: counts.linux },
-    { id: 'web', label: 'Web & Full-Stack', count: counts.web },
-    { id: 'mobile', label: 'Mobile (Flutter)', count: counts.mobile },
     { id: 'ai', label: 'AI & Systems', count: counts.ai },
   ];
 
@@ -84,13 +80,13 @@ export default function ProjectsExplorer({ initialProjects }: ProjectsExplorerPr
         {/* Section Header */}
         <div className="mb-10">
           <div className="text-xs font-bold tracking-widest uppercase text-[var(--accent-cyan)] mb-2">
-            COMPLETE REPOSITORY INDEX
+            REPOSITORY DIRECTORY
           </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-[var(--text-primary)] mb-3">
-            All GitHub Repositories
+            DevOps &amp; Infrastructure Projects
           </h2>
           <p className="text-base sm:text-lg text-[var(--text-secondary)] max-w-2xl">
-            Browse and search all 61 public projects from{' '}
+            Browse and search all 21 curated projects from{' '}
             <a
               href="https://github.com/aayasir2177"
               target="_blank"
@@ -99,7 +95,7 @@ export default function ProjectsExplorer({ initialProjects }: ProjectsExplorerPr
             >
               @aayasir2177
             </a>
-            . Instant real-time filtering with architectural breakdowns.
+            . Focused on Kubernetes GitOps, containerization, Linux systems, and AI inference.
           </p>
         </div>
 
@@ -112,7 +108,7 @@ export default function ProjectsExplorer({ initialProjects }: ProjectsExplorerPr
               type="text"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              placeholder="Search by name, technology (Docker, Ansible, React, Python), or keywords..."
+              placeholder="Search by technology (Kubernetes, Docker, Ansible, Bash, Ollama)..."
               className="w-full pl-10 pr-10 py-2.5 rounded-lg border border-[var(--border-color)] bg-[var(--bg-card)] text-sm text-[var(--text-primary)] placeholder:text-[var(--text-dim)] focus:outline-none focus:border-[var(--accent-cyan)] focus:ring-1 focus:ring-[var(--accent-cyan)] transition-all"
               aria-label="Search repositories"
             />

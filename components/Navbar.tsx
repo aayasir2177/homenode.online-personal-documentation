@@ -11,7 +11,7 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '#featured', label: 'Featured' },
-    { href: '#projects', label: 'Projects', count: '61' },
+    { href: '#projects', label: 'Projects', count: '21' },
     { href: '#homelab', label: 'Homelab' },
     { href: '#skills', label: 'Skills' },
     { href: '#about', label: 'About' },

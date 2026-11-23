@@ -65,7 +65,7 @@ export default function Hero() {
             href="#projects"
             className="inline-flex items-center gap-2 px-5 py-3 rounded-md text-sm font-semibold text-white bg-gradient-to-r from-sky-600 to-sky-700 hover:from-sky-500 hover:to-sky-600 transition-all shadow-md hover:shadow-sky-500/20 hover:-translate-y-0.5"
           >
-            <span>Explore 61 Projects</span>
+            <span>Explore 21 Projects</span>
             <ArrowDown className="w-4 h-4" />
           </Link>
           <Link
