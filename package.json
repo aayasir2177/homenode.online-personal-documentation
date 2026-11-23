@@ -1,12 +1,13 @@
 {
   "name": "homenode-online-portfolio",
   "version": "2.0.0",
-  "description": "Fast, simple, SEO-optimized, and responsive personal portfolio showcasing 61+ projects by Yasir (@aayasir2177).",
+  "description": "Fast, simple, SEO-optimized, and responsive personal portfolio showcasing 21 curated projects by Yasir (@aayasir2177).",
   "scripts": {
     "dev": "next dev -p 3000",
     "build": "next build",
     "start": "next start -p 3000",
-    "build:static": "next build"
+    "build:static": "next build",
+    "deploy": "next build && wrangler deploy"
   },
   "keywords": [
     "portfolio",
@@ -32,6 +33,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.5",
     "postcss": "^8.5.33",
-    "tailwindcss": "^4.3.5"
+    "tailwindcss": "^4.3.5",
+    "wrangler": "^4.167.0"
   }
 }

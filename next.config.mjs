@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: process.env.NEXT_OUTPUT === 'standalone' ? 'standalone' : 'export',
+  output: 'export',
   images: {
     unoptimized: true,
   },
